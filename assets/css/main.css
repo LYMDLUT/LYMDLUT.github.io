@@ -10,17 +10,18 @@
   --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --bg: #fbfaf7;
-  --bg-tint: #f4f1ec;
+  --bg: #ffffff;
+  --bg-tint: #f6f5f1;
   --surface: #ffffff;
-  --ink: #1b1b20;
-  --ink-soft: #3d424c;
-  --muted: #6b7280;
-  --line: rgba(27, 27, 32, 0.12);
-  --line-soft: rgba(27, 27, 32, 0.07);
-  --accent: #a8432a;
-  --accent-soft: rgba(168, 67, 42, 0.1);
-  --shadow: 0 1px 2px rgba(27, 27, 32, 0.04), 0 8px 24px -12px rgba(27, 27, 32, 0.18);
+  --ink: #111418;
+  --ink-soft: #3a3f47;
+  --muted: #6b7078;
+  --line: rgba(17, 20, 24, 0.1);
+  --line-soft: rgba(17, 20, 24, 0.06);
+  --accent: #2f7a2a;
+  --accent-deep: #215c1f;
+  --accent-soft: #eef6ed;
+  --shadow: 0 8px 24px -10px rgba(17, 20, 24, 0.14), 0 2px 6px rgba(17, 20, 24, 0.06);
 
   --measure: 44rem;
   --page: 54rem;
@@ -28,17 +29,18 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #11131a;
-  --bg-tint: #171a22;
-  --surface: #181b23;
-  --ink: #e9e9ec;
-  --ink-soft: #c3c7d1;
-  --muted: #949cab;
-  --line: rgba(233, 233, 236, 0.14);
-  --line-soft: rgba(233, 233, 236, 0.08);
-  --accent: #e08a68;
-  --accent-soft: rgba(224, 138, 104, 0.14);
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.7);
+  --bg: #0e1013;
+  --bg-tint: #151921;
+  --surface: #1a1e25;
+  --ink: #e8e5dc;
+  --ink-soft: #c2c0b8;
+  --muted: #8a8880;
+  --line: rgba(232, 229, 220, 0.1);
+  --line-soft: rgba(232, 229, 220, 0.06);
+  --accent: #6fb366;
+  --accent-deep: #8fc987;
+  --accent-soft: #1a2619;
+  --shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 *,
@@ -467,14 +469,14 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon {
 .pub {
   position: relative;
   padding: 1.15rem 1.25rem;
-  border: 1px solid var(--line-soft);
+  border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--surface);
-  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .pub:hover {
-  border-color: var(--line);
+  border-color: var(--accent);
   box-shadow: var(--shadow);
 }
 
@@ -539,9 +541,15 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon {
 
 .repo {
   padding: 1rem 1.15rem;
-  border: 1px solid var(--line-soft);
+  border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.repo:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
 }
 
 .repo__name {
