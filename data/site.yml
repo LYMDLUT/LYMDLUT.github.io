@@ -44,12 +44,13 @@ timeline:
     body: |
       <p>
         We work on evaluating large language and multimodal models at Tencent Hunyuan,
-        including benchmarks such as <strong>VisualNeedle</strong>,
-        <strong>EternalMath</strong>, and <strong>DramaChain Bench</strong>, as well as
-        automated scoring and attribution pipelines for image and video generation
-        (<strong>Q-Save</strong>).
+        including benchmarks such as <strong>jy-crpg-bench</strong>,
+        <strong>VisualNeedle</strong>, <strong>EternalMath</strong>, and
+        <strong>DramaChain Bench</strong>, as well as automated scoring and attribution
+        pipelines for image and video generation (<strong>Q-Save</strong>).
       </p>
     links:
+      - { label: jy-crpg-bench, url: "https://hanxiao.io/jy-crpg-bench/" }
       - { label: VisualNeedle, url: "https://arxiv.org/abs/2605.26380" }
       - { label: Q-Save, url: "https://arxiv.org/abs/2511.18825" }
       - { label: DramaChain Bench, url: "https://arxiv.org/abs/2609.00646" }
@@ -120,6 +121,23 @@ open_source:
 # `authors` highlights the entry equal to profile.name_en. Suffix a name with `*`
 # for equal contribution.
 publications:
+  - title: "jy-crpg-bench: A Long-Horizon Benchmark for Frontier Models in an Open-World RPG"
+    authors: [Han Xiao, Yiming Liu]
+    venue: Preprint
+    year: 2026
+    note: Under review
+    topic: Evaluation &amp; Benchmarks
+    links:
+      Project: "https://hanxiao.io/jy-crpg-bench/"
+      Code: "https://github.com/hanxiao/jy-crpg-bench"
+    bib: |
+      @misc{xiao2026jycrpgbench,
+        title  = {jy-crpg-bench: A Long-Horizon Benchmark for Frontier Models in an Open-World RPG},
+        author = {Xiao, Han and Liu, Yiming},
+        year   = {2026},
+        url    = {https://hanxiao.io/jy-crpg-bench/},
+      }
+
   - title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation"
     authors: [Haoyuan Shi, Mingtao Chen, Shuo Jiang, Ziyan Chen, Xuyi Sheng, Yiming Liu,
               Ying Zhang, Miao Wang, Jianxiang Lu, Fanyang Lu, Songyuanyi Lu, Xiele Wu,
