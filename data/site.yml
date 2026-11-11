@@ -1,0 +1,263 @@
+# Single source of truth for the site. Edit here, then run `python3 build.py`.
+
+site:
+  title: Yiming Liu's Page
+  url: https://LYMDLUT.github.io
+  description: >-
+    Yiming Liu (刘祎铭) - Researcher at Tencent Hunyuan, working on the evaluation of
+    large (multimodal) models. Previously object detection, diffusion models, and
+    RL infrastructure.
+  keywords: Evaluation, Benchmarks, Multimodal Large Language Models, RLHF, RLVR, Reinforcement Learning
+
+profile:
+  name_zh: 刘祎铭
+  name_en: Yiming Liu
+  tagline: Researcher @ Tencent Hunyuan.
+  portrait: assets/img/portrait.jpg
+  links:
+    - { kind: email, label: Email, handle: "letusgo126@gmail.com", url: "mailto:letusgo126@gmail.com" }
+    - { kind: github, label: GitHub, handle: "github.com/LYMDLUT", url: "https://github.com/LYMDLUT" }
+    - { kind: openreview, label: OpenReview, url: "https://openreview.net/profile?id=~Yiming_Liu15" }
+    - { kind: cv, label: CV, url: "assets/cv/Yiming_Liu_CV.pdf" }
+  about: |
+    <p>
+      I am a Researcher at <strong>Tencent Hunyuan</strong>, where we work on large model
+      evaluation. Prior to this, I worked on object detection, diffusion models, and RL
+      infrastructure.
+    </p>
+    <p>
+      I received my M.Eng. in Computer Vision from
+      <a href="https://www.sysu.edu.cn/">Sun Yat-sen University</a> in 2025, advised by
+      <a href="https://www.linliang.net/">Prof. Liang Lin</a> at the
+      <a href="https://www.sysu-hcp.net/">HCP Lab</a>, and my B.Eng. in Electronic and
+      Information Engineering from
+      <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> in 2022.
+    </p>
+
+# The spine of the page: one entry per chapter, newest first.
+timeline:
+  - period: Jul 2025 &ndash; now
+    tag: Hunyuan
+    tag_kind: now
+    title: Large Model Evaluation
+    org: Tencent Hunyuan
+    body: |
+      <p>
+        We work on evaluating large language and multimodal models at Tencent Hunyuan,
+        including benchmarks such as <strong>VisualNeedle</strong>,
+        <strong>EternalMath</strong>, and <strong>DramaChain Bench</strong>, as well as
+        automated scoring and attribution pipelines for image and video generation
+        (<strong>Q-Save</strong>).
+      </p>
+    links:
+      - { label: VisualNeedle, url: "https://arxiv.org/abs/2605.26380" }
+      - { label: Q-Save, url: "https://arxiv.org/abs/2511.18825" }
+      - { label: DramaChain Bench, url: "https://arxiv.org/abs/2609.00646" }
+      - { label: EternalMath, url: "https://arxiv.org/abs/2601.01400" }
+
+  - period: Sep 2024 &ndash; now
+    tag: OpenRLHF
+    tag_kind: code
+    title: RL Infrastructure &amp; KL Regularization
+    org: OpenRLHF
+    body: |
+      <p>
+        Developed KL-loss algorithms and distributed training backends (DeepSpeed AutoTP,
+        FSDP2&nbsp;+&nbsp;CP&nbsp;+&nbsp;TP) in
+        <a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a>. Identified the
+        gradient bias of using the <code>k3</code> estimator as a loss in GRPO and
+        proposed the unbiased <code>k2</code> loss (cited by REINFORCE++), formalized in
+        <em>Rethinking KL Regularization in RLHF</em>.
+      </p>
+    links:
+      - { label: OpenRLHF, url: "https://github.com/OpenRLHF/OpenRLHF" }
+      - { label: EMNLP 2025 paper, url: "https://aclanthology.org/2025.emnlp-demos.48/" }
+      - { label: Rethinking KL Regularization, url: "https://arxiv.org/abs/2510.01555" }
+
+  - period: Mar 2023 &ndash; Apr 2025
+    tag: ICLR 2025
+    tag_kind: paper
+    title: Diffusion-Based Adversarial Purification
+    org: HCP Lab, Sun Yat-sen University
+    body: |
+      <p>
+        Showed from a stochastic perspective that diffusion-based purification defends
+        through randomness rather than KL contraction or Gaussian noise masking, while
+        its local loss landscape remains non-flat. Proposed diffusion denoising
+        adversarial training to smooth the loss landscape across DDPM, DDIM, VP-SDE, and
+        EDM.
+      </p>
+    links:
+      - { label: OpenReview, url: "https://openreview.net/forum?id=shqjOIK3SA" }
+      - { label: arXiv, url: "https://arxiv.org/abs/2404.14309" }
+
+  - period: Jul 2022 &ndash; Mar 2023
+    tag: MMDetection
+    tag_kind: code
+    title: Detection Transformers in MMDetection
+    org: Shanghai AI Laboratory
+    body: |
+      <p>
+        Core contributor to the Detection Transformer (<code>refactor-detr</code>)
+        refactor across <a href="https://github.com/open-mmlab/mmdetection">MMDetection</a>
+        2.x and 3.x. Simplified the registry and inheritance hierarchy, unified module
+        data structures, re-implemented Conditional DETR, DAB-DETR, and DINO with strict
+        metric alignment, and presented the work at an OpenMMLab community talk.
+      </p>
+    links:
+      - { label: refactor-detr, url: "https://github.com/open-mmlab/mmdetection/tree/refactor-detr" }
+
+open_source:
+  - name: OpenRLHF
+    url: https://github.com/OpenRLHF/OpenRLHF
+    role: Maintainer &middot; KL algorithms, FSDP2/CP/TP &amp; DeepSpeed AutoTP backends
+    blurb: A high-performance RLHF framework built on Ray, vLLM, and ZeRO-3.
+  - name: MMDetection
+    url: https://github.com/open-mmlab/mmdetection
+    role: Core contributor &middot; Detection Transformers (2.x &amp; 3.x)
+    blurb: The most widely used object detection toolbox; I rebuilt its DETR family.
+
+# `authors` highlights the entry equal to profile.name_en. Suffix a name with `*`
+# for equal contribution.
+publications:
+  - title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation"
+    authors: [Haoyuan Shi, Mingtao Chen, Shuo Jiang, Ziyan Chen, Xuyi Sheng, Yiming Liu,
+              Ying Zhang, Miao Wang, Jianxiang Lu, Fanyang Lu, Songyuanyi Lu, Xiele Wu,
+              Zhichao Hu, Yuhong Liu, Richeng Xuan]
+    venue: arXiv preprint
+    year: 2026
+    topic: Evaluation &amp; Benchmarks
+    links:
+      arXiv: "https://arxiv.org/abs/2609.00646"
+      PDF: "https://arxiv.org/pdf/2609.00646"
+    bib: |
+      @article{shi2026dramachain,
+        title  = {DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation},
+        author = {Shi, Haoyuan and Chen, Mingtao and Jiang, Shuo and Chen, Ziyan and
+                  Sheng, Xuyi and Liu, Yiming and Zhang, Ying and Wang, Miao and
+                  Lu, Jianxiang and Lu, Fanyang and Lu, Songyuanyi and Wu, Xiele and
+                  Hu, Zhichao and Liu, Yuhong and Xuan, Richeng},
+        journal = {arXiv preprint arXiv:2609.00646},
+        year   = {2026},
+      }
+
+  - title: "VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes"
+    authors: [Jingru Chen, Yiming Liu, Mingtao Chen, Sijie Chen, Richeng Xuan, Liang Yang,
+              Zhichao Hu, Fanyang Lu]
+    venue: arXiv preprint
+    year: 2026
+    note: Under review
+    topic: Evaluation &amp; Benchmarks
+    links:
+      arXiv: "https://arxiv.org/abs/2605.26380"
+      PDF: "https://arxiv.org/pdf/2605.26380"
+    bib: |
+      @article{chen2026visualneedle,
+        title   = {VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes},
+        author  = {Chen, Jingru and Liu, Yiming and Chen, Mingtao and Chen, Sijie and
+                   Xuan, Richeng and Yang, Liang and Hu, Zhichao and Lu, Fanyang},
+        journal = {arXiv preprint arXiv:2605.26380},
+        year    = {2026},
+      }
+
+  - title: "EternalMath: A Living Benchmark of Frontier Mathematics that Evolves with Human Discovery"
+    authors: [Jicheng Ma, Guohua Wang, Xinhua Feng, Yiming Liu, Zhichao Hu, Yuhong Liu]
+    venue: arXiv preprint
+    year: 2026
+    topic: Evaluation &amp; Benchmarks
+    links:
+      arXiv: "https://arxiv.org/abs/2601.01400"
+      PDF: "https://arxiv.org/pdf/2601.01400"
+    bib: |
+      @article{ma2026eternalmath,
+        title   = {EternalMath: A Living Benchmark of Frontier Mathematics that Evolves with Human Discovery},
+        author  = {Ma, Jicheng and Wang, Guohua and Feng, Xinhua and Liu, Yiming and
+                   Hu, Zhichao and Liu, Yuhong},
+        journal = {arXiv preprint arXiv:2601.01400},
+        year    = {2026},
+      }
+
+  - title: "Q-Save: Towards Scoring and Attribution for Generated Video Evaluation"
+    authors: [Xiele Wu, Mingtao Chen, Zicheng Zhang, Yixian Liu, Yiming Liu, Jianxiang Lu,
+              Jin Wang, Shushi Wang, Chunyi Li, Zhichao Hu, Yuhong Liu, Xiongkuo Min,
+              Guangtao Zhai, Xiaohong Liu]
+    venue: arXiv preprint
+    year: 2025
+    topic: Evaluation &amp; Benchmarks
+    links:
+      arXiv: "https://arxiv.org/abs/2511.18825"
+      PDF: "https://arxiv.org/pdf/2511.18825"
+    bib: |
+      @article{wu2025qsave,
+        title   = {Q-Save: Towards Scoring and Attribution for Generated Video Evaluation},
+        author  = {Wu, Xiele and Chen, Mingtao and Zhang, Zicheng and Liu, Yixian and
+                   Liu, Yiming and Lu, Jianxiang and Wang, Jin and Wang, Shushi and
+                   Li, Chunyi and Hu, Zhichao and Liu, Yuhong and Min, Xiongkuo and
+                   Zhai, Guangtao and Liu, Xiaohong},
+        journal = {arXiv preprint arXiv:2511.18825},
+        year    = {2025},
+      }
+
+  - title: "Rethinking KL Regularization in RLHF: From Value Estimation to Gradient Optimization"
+    authors: [Kezhao Liu, Jason Klein Liu, Mingtao Chen, Yiming Liu]
+    venue: arXiv preprint
+    year: 2025
+    topic: RL for LLMs
+    links:
+      arXiv: "https://arxiv.org/abs/2510.01555"
+      PDF: "https://arxiv.org/pdf/2510.01555"
+    bib: |
+      @article{liu2025rethinkingkl,
+        title   = {Rethinking KL Regularization in RLHF: From Value Estimation to Gradient Optimization},
+        author  = {Liu, Kezhao and Liu, Jason Klein and Chen, Mingtao and Liu, Yiming},
+        journal = {arXiv preprint arXiv:2510.01555},
+        year    = {2025},
+      }
+
+  - title: "OpenRLHF: A Ray-based Easy-to-use, Scalable and High-performance RLHF Framework"
+    authors: [Jian Hu, Xibin Wu, Wei Shen, Jason Klein Liu, Weixun Wang, Songlin Jiang,
+              Haoran Wang, Hao Chen, Bin Chen, Wenkai Fang, Xianyu, Yu Cao, Haotian Xu,
+              Yiming Liu]
+    venue: EMNLP (System Demonstrations)
+    year: 2025
+    topic: RL Infrastructure
+    links:
+      ACL Anthology: "https://aclanthology.org/2025.emnlp-demos.48/"
+      PDF: "https://aclanthology.org/2025.emnlp-demos.48.pdf"
+      Code: "https://github.com/OpenRLHF/OpenRLHF"
+    bib: |
+      @inproceedings{hu-etal-2025-openrlhf,
+        title     = {OpenRLHF: A Ray-based Easy-to-use, Scalable and High-performance RLHF Framework},
+        author    = {Hu, Jian and Wu, Xibin and Shen, Wei and Liu, Jason Klein and
+                     Wang, Weixun and Jiang, Songlin and Wang, Haoran and Chen, Hao and
+                     Chen, Bin and Fang, Wenkai and Xianyu and Cao, Yu and Xu, Haotian and
+                     Liu, Yiming},
+        booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural
+                     Language Processing: System Demonstrations},
+        pages     = {656--666},
+        year      = {2025},
+        publisher = {Association for Computational Linguistics},
+        url       = {https://aclanthology.org/2025.emnlp-demos.48/},
+        doi       = {10.18653/v1/2025.emnlp-demos.48},
+      }
+
+  - title: "Towards Understanding the Robustness of Diffusion-Based Purification: A Stochastic Perspective"
+    authors: [Yiming Liu, Kezhao Liu, Yao Xiao, Ziyi Dong, Xiaogang Xu, Pengxu Wei, Liang Lin]
+    venue: ICLR
+    year: 2025
+    note: Poster
+    topic: Adversarial Robustness
+    links:
+      OpenReview: "https://openreview.net/forum?id=shqjOIK3SA"
+      arXiv: "https://arxiv.org/abs/2404.14309"
+      PDF: "https://arxiv.org/pdf/2404.14309"
+    bib: |
+      @inproceedings{liu2025towards,
+        title     = {Towards Understanding the Robustness of Diffusion-Based Purification:
+                     A Stochastic Perspective},
+        author    = {Liu, Yiming and Liu, Kezhao and Xiao, Yao and Dong, Ziyi and
+                     Xu, Xiaogang and Wei, Pengxu and Lin, Liang},
+        booktitle = {The Thirteenth International Conference on Learning Representations},
+        year      = {2025},
+        url       = {https://openreview.net/forum?id=shqjOIK3SA},
+      }

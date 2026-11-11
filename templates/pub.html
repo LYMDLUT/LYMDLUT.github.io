@@ -1,0 +1,24 @@
+{% macro card(pub, self_name) -%}
+<li class="pub">
+  <div class="pub__meta">
+    <span class="chip">{{ pub.topic }}</span>
+    <span class="pub__venue">{{ pub.venue }}, {{ pub.year }}</span>
+    {% if pub.get("note") %}<span class="chip chip--muted">{{ pub.note }}</span>{% endif %}
+  </div>
+  <h3 class="pub__title">{{ pub.title }}</h3>
+  <p class="pub__authors">
+    {%- for author in pub.authors -%}
+    {%- if author.rstrip("*") == self_name %}<span class="self">{{ author }}</span>{% else %}{{ author }}{% endif -%}
+    {{- ", " if not loop.last else "" -}}
+    {%- endfor -%}
+  </p>
+  <div class="links">
+    {% for label, url in pub.get("links", {}).items() %}
+    <a class="btn" href="{{ url }}">{{ label }}</a>
+    {% endfor %}
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">{{ pub.bib | trim }}</code></pre>
+</li>
+{%- endmacro %}

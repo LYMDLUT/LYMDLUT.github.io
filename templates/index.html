@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% import "pub.html" as pubs %}
+
+{% block content %}
+<header class="hero">
+  <div>
+    <h1 class="hero__name">
+      <span class="zh">{{ profile.name_zh }}</span><span class="sep">|</span><span>{{ profile.name_en }}</span>
+    </h1>
+    <p class="hero__tagline">{{ profile.tagline }}</p>
+    <p class="hero__meta">
+      {% for link in profile.links %}
+      <a href="{{ link.url }}">{{ link.handle | default(link.label, true) }}</a>{{ " / " if not loop.last }}
+      {% endfor %}
+    </p>
+  </div>
+  <img class="hero__portrait" src="{{ profile.portrait }}" alt="{{ profile.name_en }}" width="168" height="168">
+</header>
+
+<div class="prose">
+  {{ profile.about }}
+</div>
+
+<section class="section" id="timeline">
+  <div class="section__head">
+    <h2 class="section__title">Timeline</h2>
+  </div>
+  <ol class="timeline">
+    {% for entry in timeline %}
+    <li class="tl-item">
+      <div class="tl-item__meta">
+        <span class="chip{{ ' chip--muted' if entry.tag_kind == 'code' }}">{{ entry.tag }}</span>
+        <span class="tl-item__period">{{ entry.period }}</span>
+      </div>
+      <h3 class="tl-item__title">{{ entry.title }}</h3>
+      <p class="tl-item__org">{{ entry.org }}</p>
+      <div class="tl-item__body">{{ entry.body }}</div>
+      {% if entry.links %}
+      <div class="links">
+        {% for link in entry.links %}<a class="btn" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% if publications %}
+<section class="section" id="publications">
+  <div class="section__head">
+    <h2 class="section__title">Publications</h2>
+  </div>
+  <ol class="pub-list">
+    {% for pub in publications %}{{ pubs.card(pub, profile.name_en) }}{% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="section" id="open-source">
+  <div class="section__head">
+    <h2 class="section__title">Open source</h2>
+  </div>
+  <div class="repos">
+    {% for repo in open_source %}
+    <div class="repo">
+      <h3 class="repo__name"><a href="{{ repo.url }}">{{ repo.name }}</a></h3>
+      <p class="repo__role">{{ repo.role }}</p>
+      <p class="repo__blurb">{{ repo.blurb }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
