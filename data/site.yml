@@ -4,10 +4,9 @@ site:
   title: Yiming Liu's Page
   url: https://LYMDLUT.github.io
   description: >-
-    Yiming Liu (刘祎铭) - Researcher at Tencent Hunyuan, working on the evaluation of
-    large (multimodal) models. Previously object detection, diffusion models, and
-    RL infrastructure.
-  keywords: Evaluation, Benchmarks, Multimodal Large Language Models, RLHF, RLVR, Reinforcement Learning
+    Yiming Liu (刘祎铭) - Researcher at Tencent Hunyuan, working on LLM evaluation.
+    Previously object detection, diffusion models, and RL infrastructure.
+  keywords: LLM Evaluation, Benchmarks, Multimodal Large Language Models, RLHF, RLVR, Reinforcement Learning
 
 profile:
   name_zh: 刘祎铭
@@ -21,9 +20,9 @@ profile:
     - { kind: cv, label: CV, url: "assets/cv/Yiming_Liu_CV.pdf" }
   about: |
     <p>
-      I am a Researcher at <strong>Tencent Hunyuan</strong>, where we work on large model
-      evaluation. Prior to this, I worked on object detection, diffusion models, and RL
-      infrastructure.
+      I am a Researcher at <strong>Tencent Hunyuan</strong>, where we work on
+      <strong>LLM evaluation</strong>. Prior to this, I worked on object detection,
+      diffusion models, and RL infrastructure.
     </p>
     <p>
       I received my M.Eng. in Computer Vision from
@@ -39,7 +38,7 @@ timeline:
   - period: Jul 2025 &ndash; now
     tag: Hunyuan
     tag_kind: now
-    title: Large Model Evaluation
+    title: LLM Evaluation
     org: Tencent Hunyuan
     body: |
       <p>
