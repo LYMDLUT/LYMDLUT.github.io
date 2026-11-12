@@ -46,7 +46,17 @@ git push -u origin main
 GitHub Pages serves a repo named `<user>.github.io` from its default branch at
 `https://LYMDLUT.github.io` — enable it under *Settings → Pages → Deploy from a branch*.
 
+## Résumé
+
+The LaTeX source of the Chinese résumé lives in [`resume/`](resume/), fonts included, so it
+builds anywhere with XeLaTeX. After editing it, rebuild and refresh the copy the `CV` nav
+link points at:
+
+```sh
+cd resume && make zh_CN && cp resume-zh_CN.pdf ../assets/cv/Yiming_Liu_CV.pdf
+```
+
 ## Notes
 
-- `assets/cv/Yiming_Liu_CV.pdf` is currently the Chinese résumé; swap in an English CV if you
-  want the `CV` nav link to be readable to international visitors.
+- `assets/cv/Yiming_Liu_CV.pdf` is the Chinese résumé; add an English CV if you want the
+  `CV` nav link to be readable to international visitors.
