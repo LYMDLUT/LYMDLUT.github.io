@@ -52,15 +52,10 @@ GitHub Pages serves a repo named `<user>.github.io` from its default branch at
 
 ## Résumé
 
-The LaTeX source of the Chinese résumé lives in [`resume/`](resume/), fonts included, so it
-builds anywhere with XeLaTeX. After editing it, rebuild and refresh the copy the `CV` nav
-link points at:
+The LaTeX source of both résumés lives in [`resume/`](resume/), fonts included, so they
+build anywhere with XeLaTeX. The English page links to the English PDF and the Chinese page
+to the Chinese one. After editing, rebuild and copy them into `assets/cv/`:
 
 ```sh
-cd resume && make zh_CN && cp resume-zh_CN.pdf ../assets/cv/Yiming_Liu_CV.pdf
+cd resume && make publish
 ```
-
-## Notes
-
-- `assets/cv/Yiming_Liu_CV.pdf` is the Chinese résumé; add an English CV if you want the
-  `CV` nav link to be readable to international visitors.

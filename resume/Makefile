@@ -1,25 +1,19 @@
-SRC = $(wildcard *.tex)
+RESUMES = resume-zh_CN.pdf resume-en.pdf
 
-PDFS = $(SRC:.tex=.pdf)
+all: $(RESUMES)
 
-all:	clean pdf
+zh_CN: resume-zh_CN.pdf
+en: resume-en.pdf
 
-en:	clean xelatex resume.tex
+%.pdf: %.tex resume.cls
+	xelatex -interaction=nonstopmode $<
 
-zh_CN:	clean xelatex resume-zh_CN.tex
-
-pdf:	clean $(PDFS)
-
-%.pdf:  %.tex
-	xelatex $<
-
-ifeq ($(OS),Windows_NT)
-  # on Windows
-  RM = cmd //C del
-else
-  # on Unix/Linux
-  RM = rm -f
-endif
+# Copy the freshly built PDFs to where the homepage links to them.
+publish: $(RESUMES)
+	cp resume-en.pdf ../assets/cv/Yiming_Liu_CV_en.pdf
+	cp resume-zh_CN.pdf ../assets/cv/Yiming_Liu_CV_zh.pdf
 
 clean:
-	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	rm -f *.aux *.log *.out *.synctex.gz
+
+.PHONY: all zh_CN en publish clean

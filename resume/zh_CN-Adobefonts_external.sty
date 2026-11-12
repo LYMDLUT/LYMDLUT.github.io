@@ -15,17 +15,17 @@ BoldFont=AdobeHeitiStd-Regular.otf,
 ItalicFont=AdobeKaitiStd-Regular.otf,
 SmallCapsFont=AdobeHeitiStd-Regular.otf
 ]{AdobeSongStd-Light.otf}
+% Only Song, Hei and Kai are vendored under fonts/zh_CN-Adobe/, so the CJK
+% monospace face points at Song; naming Fangsong here made \texttt{} abort.
 \setCJKsansfont{AdobeHeitiStd-Regular.otf}
-\setCJKmonofont{AdobeFangsongStd-Regular.otf}
+\setCJKmonofont{AdobeSongStd-Light.otf}
 
 \setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
 \setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
-\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
 \setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
 
 \newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
 \newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
 \newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
-\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
 
 \endinput

@@ -28,12 +28,13 @@ def localize(node, lang: str):
     return node
 
 
-def navigation(ui: dict, root: str) -> list[dict]:
+def navigation(ui: dict, profile: dict) -> list[dict]:
+    cv = next(link["url"] for link in profile["links"] if link["kind"] == "cv")
     return [
         {"label": ui["nav_about"], "url": "#main"},
         {"label": ui["nav_timeline"], "url": "#timeline"},
         {"label": ui["nav_publications"], "url": "#publications"},
-        {"label": ui["nav_cv"], "url": f"{root}assets/cv/Yiming_Liu_CV.pdf"},
+        {"label": ui["nav_cv"], "url": cv},
     ]
 
 
@@ -75,7 +76,7 @@ def main() -> None:
             timeline=page["timeline"],
             publications=page["publications"] or [],
             open_source=page["open_source"],
-            nav=navigation(page["ui"], root),
+            nav=navigation(page["ui"], page["profile"]),
             year=today.year,
             built=today.strftime("%b %Y") if lang == "en" else today.strftime("%Y 年 %-m 月"),
         )

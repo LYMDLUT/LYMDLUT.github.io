@@ -45,7 +45,9 @@ profile:
     - { kind: email, label: Email, handle: "letusgo126@gmail.com", url: "mailto:letusgo126@gmail.com" }
     - { kind: github, label: GitHub, handle: "github.com/LYMDLUT", url: "https://github.com/LYMDLUT" }
     - { kind: openreview, label: OpenReview, url: "https://openreview.net/profile?id=~Yiming_Liu15" }
-    - { kind: cv, label: CV, url: "assets/cv/Yiming_Liu_CV.pdf" }
+    - kind: cv
+      label: { en: CV, zh: 简历 }
+      url: { en: "assets/cv/Yiming_Liu_CV_en.pdf", zh: "assets/cv/Yiming_Liu_CV_zh.pdf" }
   about:
     en: |
       <p>
