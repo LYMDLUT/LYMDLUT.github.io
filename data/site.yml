@@ -218,6 +218,22 @@ publications:
         year   = {2026},
       }
 
+  - title: "CAPF: Guiding Search-Agent Rollouts with Credit-Attenuated Privileged Feedback"
+    authors: [Bin Chen, Xinye Liao, Yiming Liu, Xin Liao, Chonghan Liu]
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
+    year: 2026
+    topic: { en: RL for LLMs, zh: LLM 强化学习 }
+    links:
+      arXiv: "https://arxiv.org/abs/2606.01830"
+      PDF: "https://arxiv.org/pdf/2606.01830"
+    bib: |
+      @article{chen2026capf,
+        title   = {CAPF: Guiding Search-Agent Rollouts with Credit-Attenuated Privileged Feedback},
+        author  = {Chen, Bin and Liao, Xinye and Liu, Yiming and Liao, Xin and Liu, Chonghan},
+        journal = {arXiv preprint arXiv:2606.01830},
+        year    = {2026},
+      }
+
   - title: "VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes"
     authors: [Jingru Chen*, Yiming Liu*, Mingtao Chen, Sijie Chen, Richeng Xuan, Liang Yang,
               Zhichao Hu, Fanyang Lu]
