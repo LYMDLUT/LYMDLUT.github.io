@@ -598,6 +598,27 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon {
   margin: 0;
 }
 
+/* --- toast ---------------------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%);
+  z-index: 50;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  box-shadow: var(--shadow);
+}
+
+.toast[hidden] {
+  display: none;
+}
+
 /* --- footer --------------------------------------------------------------- */
 
 .footer {

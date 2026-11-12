@@ -52,7 +52,7 @@
   <div class="nav__inner">
     <div class="nav__social">
       {% for link in profile.links if link.kind != "cv" %}
-      <a href="{{ link.url }}" title="{{ link.label }}" aria-label="{{ link.label }}"{{ ' rel="me"' if link.kind != "email" }}>{{ icons.icon(link.kind) }}</a>
+      <a href="{{ link.url }}" title="{{ link.label }}" aria-label="{{ link.label }}"{{ ' rel="me"' if link.kind != "email" }}{% if link.kind == "email" %} data-copy-email="{{ link.url | replace('mailto:', '') }}"{% endif %}>{{ icons.icon(link.kind) }}</a>
       {% endfor %}
     </div>
     <ul class="nav__links">
@@ -89,6 +89,8 @@
     <span class="footer__built">{{ ui.footer_built }} &middot; {{ built }}</span>
   </div>
 </footer>
+
+<div class="toast" role="status" aria-live="polite" data-label="{{ ui.email_copied }}" hidden></div>
 
 <script src="{{ root }}assets/js/main.js"></script>
 </body>

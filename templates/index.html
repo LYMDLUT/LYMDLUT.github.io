@@ -10,7 +10,7 @@
     <p class="hero__tagline">{{ profile.tagline }}</p>
     <p class="hero__meta">
       {% for link in profile.links %}
-      <a href="{{ link.url }}">{{ link.handle | default(link.label, true) }}</a>{{ " / " if not loop.last }}
+      <a href="{{ link.url }}"{% if link.kind == "email" %} data-copy-email="{{ link.url | replace('mailto:', '') }}"{% endif %}>{{ link.handle | default(link.label, true) }}</a>{{ " / " if not loop.last }}
       {% endfor %}
     </p>
   </div>

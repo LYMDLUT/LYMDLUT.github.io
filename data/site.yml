@@ -30,6 +30,7 @@ ui:
   equal_contribution: { en: "* denotes equal contribution", zh: "* 表示共同一作" }
   footer_built: { en: last built, zh: 最近构建 }
   skip_to_content: { en: Skip to content, zh: 跳到正文 }
+  email_copied: { en: Email address copied, zh: 邮箱地址已复制 }
   theme_toggle: { en: Toggle dark mode, zh: 切换深色模式 }
   # Labels of the 中/英 switch. Deliberately not an {en, zh} map: both labels
   # show on both pages, so neither may be collapsed away.

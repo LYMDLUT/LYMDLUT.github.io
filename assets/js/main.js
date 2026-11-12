@@ -51,6 +51,26 @@ function setUpBibtex() {
   });
 }
 
+// A mailto: link does nothing visible when no mail client is configured, so
+// copy the address as well and confirm that something happened.
+function setUpEmailCopy() {
+  const toast = document.querySelector(".toast");
+  if (!toast) return;
+  let hideTimer;
+  document.querySelectorAll("[data-copy-email]").forEach((link) => {
+    link.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(link.dataset.copyEmail);
+      toast.textContent = toast.dataset.label;
+      toast.hidden = false;
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => {
+        toast.hidden = true;
+      }, 2200);
+    });
+  });
+}
+
 setUpThemeToggle();
 setUpScrollProgress();
 setUpBibtex();
+setUpEmailCopy();
