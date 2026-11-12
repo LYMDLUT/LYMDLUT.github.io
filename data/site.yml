@@ -47,6 +47,7 @@ profile:
   links:
     - { kind: email, label: Email, handle: "letusgo126@gmail.com", url: "mailto:letusgo126@gmail.com" }
     - { kind: github, label: GitHub, handle: "github.com/LYMDLUT", url: "https://github.com/LYMDLUT" }
+    - { kind: scholar, label: Google Scholar, handle: Scholar, url: "https://scholar.google.com/citations?user=0EakYd0AAAAJ" }
     - { kind: openreview, label: OpenReview, url: "https://openreview.net/profile?id=~Yiming_Liu15" }
     - kind: cv
       label: { en: CV, zh: 简历 }
