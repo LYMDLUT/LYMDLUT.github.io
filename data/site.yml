@@ -317,6 +317,26 @@ publications:
         doi       = {10.18653/v1/2025.emnlp-demos.48},
       }
 
+  - title: "Text Enhancement Network for Complex Multi-line Scene Text Image Super-resolution"
+    authors: [Yang Liu, Yuliang Huang, Yiming Liu]
+    venue: ICASSP
+    year: 2025
+    topic: { en: Low-level Vision, zh: 底层视觉 }
+    links:
+      IEEE: "https://ieeexplore.ieee.org/document/10890421"
+      DOI: "https://doi.org/10.1109/ICASSP49660.2025.10890421"
+    bib: |
+      @inproceedings{liu2025text,
+        title     = {Text Enhancement Network for Complex Multi-line Scene Text Image
+                     Super-resolution},
+        author    = {Liu, Yang and Huang, Yuliang and Liu, Yiming},
+        booktitle = {ICASSP 2025 -- 2025 IEEE International Conference on Acoustics,
+                     Speech and Signal Processing (ICASSP)},
+        pages     = {1--5},
+        year      = {2025},
+        doi       = {10.1109/ICASSP49660.2025.10890421},
+      }
+
   - title: "Towards Understanding the Robustness of Diffusion-Based Purification: A Stochastic Perspective"
     authors: [Yiming Liu, Kezhao Liu, Yao Xiao, Ziyi Dong, Xiaogang Xu, Pengxu Wei, Liang Lin]
     venue: ICLR
