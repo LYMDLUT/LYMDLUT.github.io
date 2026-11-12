@@ -23,7 +23,7 @@
 
 <section class="section" id="timeline">
   <div class="section__head">
-    <h2 class="section__title">Timeline</h2>
+    <h2 class="section__title">{{ ui.section_timeline }}</h2>
   </div>
   <ol class="timeline">
     {% for entry in timeline %}
@@ -48,7 +48,8 @@
 {% if publications %}
 <section class="section" id="publications">
   <div class="section__head">
-    <h2 class="section__title">Publications</h2>
+    <h2 class="section__title">{{ ui.section_publications }}</h2>
+    <span class="section__note">{{ ui.equal_contribution }}</span>
   </div>
   <ol class="pub-list">
     {% for pub in publications %}{{ pubs.card(pub, profile.name_en) }}{% endfor %}
@@ -58,7 +59,7 @@
 
 <section class="section" id="open-source">
   <div class="section__head">
-    <h2 class="section__title">Open source</h2>
+    <h2 class="section__title">{{ ui.section_open_source }}</h2>
   </div>
   <div class="repos">
     {% for repo in open_source %}

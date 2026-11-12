@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>刘祎铭的主页</title>
+<meta name="author" content="Yiming Liu">
+<meta name="description" content="刘祎铭 - 腾讯混元研究员，做大模型评测。此前做过目标检测、扩散模型和 RL 基础设施。">
+<meta name="keywords" content="大模型评测, 基准, 多模态大模型, RLHF, RLVR, 强化学习">
+<link rel="canonical" href="https://LYMDLUT.github.io/zh/">
+<link rel="alternate" hreflang="en" href="https://LYMDLUT.github.io/">
+<link rel="alternate" hreflang="zh-Hans" href="https://LYMDLUT.github.io/zh/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="刘祎铭的主页">
+<meta property="og:title" content="刘祎铭的主页">
+<meta property="og:url" content="https://LYMDLUT.github.io/zh/">
+<meta property="og:description" content="刘祎铭 - 腾讯混元研究员，做大模型评测。此前做过目标检测、扩散模型和 RL 基础设施。">
+<meta property="og:image" content="https://LYMDLUT.github.io/assets/img/portrait.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://LYMDLUT.github.io/assets/img/portrait.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yiming Liu",
+  "alternateName": "刘祎铭",
+  "jobTitle": "Researcher",
+  "worksFor": { "@type": "Organization", "name": "Tencent Hunyuan" },
+  "url": "https://LYMDLUT.github.io/",
+  "sameAs": ["https://github.com/LYMDLUT", "https://openreview.net/profile?id=~Yiming_Liu15"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪡</text></svg>">
+<script>
+  document.documentElement.dataset.theme =
+    localStorage.getItem("theme") ??
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <div class="nav__social">
+      <a href="mailto:letusgo126@gmail.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg></a>
+      <a href="https://github.com/LYMDLUT" title="GitHub" aria-label="GitHub" rel="me"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.24a11.4 11.4 0 0 1 6.01 0c2.29-1.56 3.3-1.24 3.3-1.24.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg></a>
+      <a href="https://openreview.net/profile?id=~Yiming_Liu15" title="OpenReview" aria-label="OpenReview" rel="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><ellipse cx="12" cy="12" rx="4" ry="9.2"/></svg></a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#main">关于</a></li>
+      <li><a href="#timeline">时间线</a></li>
+      <li><a href="#publications">论文</a></li>
+      <li><a href="../assets/cv/Yiming_Liu_CV.pdf">简历</a></li>
+      <li><a class="nav__lang" href="../" hreflang="en">English</a></li>
+      <li>
+        <button class="theme-toggle" type="button" aria-label="切换深色模式">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></svg>
+        </button>
+      </li>
+    </ul>
+    <div class="progress"><span class="progress__bar"></span></div>
+  </div>
+</nav>
+
+<main id="main" class="wrap">
+<header class="hero">
+  <div>
+    <h1 class="hero__name">
+      <span class="zh">刘祎铭</span><span class="sep">|</span><span>Yiming Liu</span>
+    </h1>
+    <p class="hero__tagline">腾讯混元 · 研究员</p>
+    <p class="hero__meta">
+      <a href="mailto:letusgo126@gmail.com">letusgo126@gmail.com</a> / 
+      <a href="https://github.com/LYMDLUT">github.com/LYMDLUT</a> / 
+      <a href="https://openreview.net/profile?id=~Yiming_Liu15">OpenReview</a> / 
+      <a href="../assets/cv/Yiming_Liu_CV.pdf">CV</a>
+    </p>
+  </div>
+  <img class="hero__portrait" src="../assets/img/portrait.jpg" alt="Yiming Liu" width="168" height="168">
+</header>
+
+<div class="prose">
+  <p>我是<strong>腾讯混元</strong>的研究员，目前在做<strong>大模型评测</strong>。在此之前做过目标检测、扩散模型和 RL 基础设施。</p>
+<p>2025 年于<a href="https://www.sysu.edu.cn/">中山大学</a>获计算机视觉硕士学位，导师为<a href="https://www.sysu-hcp.net/">人机物智能融合实验室（HCP Lab）</a>的<a href="https://www.linliang.net/">林倞</a>教授；2022 年于<a href="https://www.dlut.edu.cn/">大连理工大学</a>获电子信息工程学士学位。</p>
+
+</div>
+
+<section class="section" id="timeline">
+  <div class="section__head">
+    <h2 class="section__title">时间线</h2>
+  </div>
+  <ol class="timeline">
+    <li class="tl-item">
+      <div class="tl-item__meta">
+        <span class="chip">Hunyuan</span>
+        <span class="tl-item__period">2025 年 7 月 &ndash; 至今</span>
+      </div>
+      <h3 class="tl-item__title">大模型评测</h3>
+      <p class="tl-item__org">腾讯混元</p>
+      <div class="tl-item__body"><p>在腾讯混元做大语言模型与多模态模型的评测，包括 <strong>jy-crpg-bench</strong>、<strong>VisualNeedle</strong>、<strong>EternalMath</strong>、<strong>DramaChain Bench</strong> 等基准，以及图像与视频生成的自动打分与归因流水线（<strong>Q-Save</strong>）。</p>
+</div>
+      <div class="links">
+<a class="btn" href="https://hanxiao.io/jy-crpg-bench/">jy-crpg-bench</a><a class="btn" href="https://arxiv.org/abs/2605.26380">VisualNeedle</a><a class="btn" href="https://arxiv.org/abs/2511.18825">Q-Save</a><a class="btn" href="https://arxiv.org/abs/2609.00646">DramaChain Bench</a><a class="btn" href="https://arxiv.org/abs/2601.01400">EternalMath</a>      </div>
+    </li>
+    <li class="tl-item">
+      <div class="tl-item__meta">
+        <span class="chip chip--muted">OpenRLHF</span>
+        <span class="tl-item__period">2024 年 9 月 &ndash; 至今</span>
+      </div>
+      <h3 class="tl-item__title">RL 基础设施与 KL 正则</h3>
+      <p class="tl-item__org">OpenRLHF</p>
+      <div class="tl-item__body"><p>在 <a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a> 中开发 KL 损失算法与分布式训练后端（DeepSpeed AutoTP、FSDP2&nbsp;+&nbsp;CP&nbsp;+&nbsp;TP）。首次发现 GRPO 中把 <code>k3</code> 估计量直接当作损失函数会带来梯度有偏，提出无偏的 <code>k2</code> loss（被 REINFORCE++ 引用），并总结为 <em>Rethinking KL Regularization in RLHF</em>。</p>
+</div>
+      <div class="links">
+<a class="btn" href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a><a class="btn" href="https://aclanthology.org/2025.emnlp-demos.48/">EMNLP 2025 论文</a><a class="btn" href="https://arxiv.org/abs/2510.01555">Rethinking KL Regularization</a>      </div>
+    </li>
+    <li class="tl-item">
+      <div class="tl-item__meta">
+        <span class="chip">ICLR 2025</span>
+        <span class="tl-item__period">2023 年 3 月 &ndash; 2025 年 4 月</span>
+      </div>
+      <h3 class="tl-item__title">基于扩散模型的对抗净化</h3>
+      <p class="tl-item__org">中山大学 HCP Lab</p>
+      <div class="tl-item__body"><p>从随机性的角度指出，扩散净化的防御能力来自随机性，而非既有研究认为的「前向加噪减小 KL 散度」或「高斯噪声的掩盖效应」，且其 Loss landscape 局部并不平坦。提出扩散去噪对抗训练，在 DDPM、DDIM、VP-SDE、EDM 上平滑 Loss landscape 并一致提升鲁棒性。</p>
+</div>
+      <div class="links">
+<a class="btn" href="https://openreview.net/forum?id=shqjOIK3SA">OpenReview</a><a class="btn" href="https://arxiv.org/abs/2404.14309">arXiv</a>      </div>
+    </li>
+    <li class="tl-item">
+      <div class="tl-item__meta">
+        <span class="chip chip--muted">MMDetection</span>
+        <span class="tl-item__period">2022 年 7 月 &ndash; 2023 年 3 月</span>
+      </div>
+      <h3 class="tl-item__title">MMDetection 中的 Detection Transformer</h3>
+      <p class="tl-item__org">上海人工智能实验室</p>
+      <div class="tl-item__body"><p><a href="https://github.com/open-mmlab/mmdetection">MMDetection</a> 2.x 与 3.x 中 Detection Transformer 系列重构（<code>refactor-detr</code>）的核心贡献者。简化注册机制与继承层级，统一模块数据结构，重新实现 Conditional DETR、DAB-DETR 和 DINO 并严格对齐指标，并受邀在 OpenMMLab 社区开放麦上分享这项工作。</p>
+</div>
+      <div class="links">
+<a class="btn" href="https://github.com/open-mmlab/mmdetection/tree/refactor-detr">refactor-detr</a>      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="section" id="publications">
+  <div class="section__head">
+    <h2 class="section__title">论文</h2>
+    <span class="section__note">* 表示共同一作</span>
+  </div>
+  <ol class="pub-list">
+<li class="pub">
+  <div class="pub__meta">
+    <span class="chip">评测与基准</span>
+    <span class="pub__venue">预印本, 2026</span>
+<span class="chip chip--muted">投稿中</span>  </div>
+  <h3 class="pub__title">jy-crpg-bench: A Long-Horizon Benchmark for Frontier Models in an Open-World RPG</h3>
+  <p class="pub__authors">Han Xiao, <span class="self">Yiming Liu</span></p>
+  <div class="links">
+    <a class="btn" href="https://hanxiao.io/jy-crpg-bench/">Project</a>
+    <a class="btn" href="https://github.com/hanxiao/jy-crpg-bench">Code</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@misc{xiao2026jycrpgbench,
+  title  = {jy-crpg-bench: A Long-Horizon Benchmark for Frontier Models in an Open-World RPG},
+  author = {Xiao, Han and Liu, Yiming},
+  year   = {2026},
+  url    = {https://hanxiao.io/jy-crpg-bench/},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">评测与基准</span>
+    <span class="pub__venue">arXiv 预印本, 2026</span>
+  </div>
+  <h3 class="pub__title">DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation</h3>
+  <p class="pub__authors">Haoyuan Shi, Mingtao Chen, Shuo Jiang, Ziyan Chen, Xuyi Sheng, <span class="self">Yiming Liu</span>, Ying Zhang, Miao Wang, Jianxiang Lu, Fanyang Lu, Songyuanyi Lu, Xiele Wu, Zhichao Hu, Yuhong Liu, Richeng Xuan</p>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2609.00646">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2609.00646">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@article{shi2026dramachain,
+  title  = {DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation},
+  author = {Shi, Haoyuan and Chen, Mingtao and Jiang, Shuo and Chen, Ziyan and
+            Sheng, Xuyi and Liu, Yiming and Zhang, Ying and Wang, Miao and
+            Lu, Jianxiang and Lu, Fanyang and Lu, Songyuanyi and Wu, Xiele and
+            Hu, Zhichao and Liu, Yuhong and Xuan, Richeng},
+  journal = {arXiv preprint arXiv:2609.00646},
+  year   = {2026},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">评测与基准</span>
+    <span class="pub__venue">arXiv 预印本, 2026</span>
+<span class="chip chip--muted">投稿中</span>  </div>
+  <h3 class="pub__title">VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes</h3>
+  <p class="pub__authors">Jingru Chen*, <span class="self">Yiming Liu*</span>, Mingtao Chen, Sijie Chen, Richeng Xuan, Liang Yang, Zhichao Hu, Fanyang Lu</p>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2605.26380">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2605.26380">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@article{chen2026visualneedle,
+  title   = {VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes},
+  author  = {Chen, Jingru and Liu, Yiming and Chen, Mingtao and Chen, Sijie and
+             Xuan, Richeng and Yang, Liang and Hu, Zhichao and Lu, Fanyang},
+  journal = {arXiv preprint arXiv:2605.26380},
+  year    = {2026},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">评测与基准</span>
+    <span class="pub__venue">arXiv 预印本, 2026</span>
+  </div>
+  <h3 class="pub__title">EternalMath: A Living Benchmark of Frontier Mathematics that Evolves with Human Discovery</h3>
+  <p class="pub__authors">Jicheng Ma, Guohua Wang, Xinhua Feng, <span class="self">Yiming Liu</span>, Zhichao Hu, Yuhong Liu</p>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2601.01400">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2601.01400">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@article{ma2026eternalmath,
+  title   = {EternalMath: A Living Benchmark of Frontier Mathematics that Evolves with Human Discovery},
+  author  = {Ma, Jicheng and Wang, Guohua and Feng, Xinhua and Liu, Yiming and
+             Hu, Zhichao and Liu, Yuhong},
+  journal = {arXiv preprint arXiv:2601.01400},
+  year    = {2026},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">评测与基准</span>
+    <span class="pub__venue">arXiv 预印本, 2025</span>
+  </div>
+  <h3 class="pub__title">Q-Save: Towards Scoring and Attribution for Generated Video Evaluation</h3>
+  <p class="pub__authors">Xiele Wu, Mingtao Chen, Zicheng Zhang, Yixian Liu, <span class="self">Yiming Liu</span>, Jianxiang Lu, Jin Wang, Shushi Wang, Chunyi Li, Zhichao Hu, Yuhong Liu, Xiongkuo Min, Guangtao Zhai, Xiaohong Liu</p>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2511.18825">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2511.18825">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@article{wu2025qsave,
+  title   = {Q-Save: Towards Scoring and Attribution for Generated Video Evaluation},
+  author  = {Wu, Xiele and Chen, Mingtao and Zhang, Zicheng and Liu, Yixian and
+             Liu, Yiming and Lu, Jianxiang and Wang, Jin and Wang, Shushi and
+             Li, Chunyi and Hu, Zhichao and Liu, Yuhong and Min, Xiongkuo and
+             Zhai, Guangtao and Liu, Xiaohong},
+  journal = {arXiv preprint arXiv:2511.18825},
+  year    = {2025},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">LLM 强化学习</span>
+    <span class="pub__venue">arXiv 预印本, 2025</span>
+  </div>
+  <h3 class="pub__title">Rethinking KL Regularization in RLHF: From Value Estimation to Gradient Optimization</h3>
+  <p class="pub__authors">Kezhao Liu, Jason Klein Liu, Mingtao Chen, <span class="self">Yiming Liu</span></p>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2510.01555">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2510.01555">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@article{liu2025rethinkingkl,
+  title   = {Rethinking KL Regularization in RLHF: From Value Estimation to Gradient Optimization},
+  author  = {Liu, Kezhao and Liu, Jason Klein and Chen, Mingtao and Liu, Yiming},
+  journal = {arXiv preprint arXiv:2510.01555},
+  year    = {2025},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">RL 基础设施</span>
+    <span class="pub__venue">EMNLP 演示论文, 2025</span>
+  </div>
+  <h3 class="pub__title">OpenRLHF: A Ray-based Easy-to-use, Scalable and High-performance RLHF Framework</h3>
+  <p class="pub__authors">Jian Hu, Xibin Wu, Wei Shen, Jason Klein Liu, Weixun Wang, Songlin Jiang, Haoran Wang, Hao Chen, Bin Chen, Wenkai Fang, Xianyu, Yu Cao, Haotian Xu, <span class="self">Yiming Liu</span></p>
+  <div class="links">
+    <a class="btn" href="https://aclanthology.org/2025.emnlp-demos.48/">ACL Anthology</a>
+    <a class="btn" href="https://aclanthology.org/2025.emnlp-demos.48.pdf">PDF</a>
+    <a class="btn" href="https://github.com/OpenRLHF/OpenRLHF">Code</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@inproceedings{hu-etal-2025-openrlhf,
+  title     = {OpenRLHF: A Ray-based Easy-to-use, Scalable and High-performance RLHF Framework},
+  author    = {Hu, Jian and Wu, Xibin and Shen, Wei and Liu, Jason Klein and
+               Wang, Weixun and Jiang, Songlin and Wang, Haoran and Chen, Hao and
+               Chen, Bin and Fang, Wenkai and Xianyu and Cao, Yu and Xu, Haotian and
+               Liu, Yiming},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural
+               Language Processing: System Demonstrations},
+  pages     = {656--666},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.emnlp-demos.48/},
+  doi       = {10.18653/v1/2025.emnlp-demos.48},
+}</code></pre>
+</li><li class="pub">
+  <div class="pub__meta">
+    <span class="chip">对抗鲁棒性</span>
+    <span class="pub__venue">ICLR, 2025</span>
+<span class="chip chip--muted">Poster</span>  </div>
+  <h3 class="pub__title">Towards Understanding the Robustness of Diffusion-Based Purification: A Stochastic Perspective</h3>
+  <p class="pub__authors"><span class="self">Yiming Liu</span>, Kezhao Liu, Yao Xiao, Ziyi Dong, Xiaogang Xu, Pengxu Wei, Liang Lin</p>
+  <div class="links">
+    <a class="btn" href="https://openreview.net/forum?id=shqjOIK3SA">OpenReview</a>
+    <a class="btn" href="https://arxiv.org/abs/2404.14309">arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2404.14309">PDF</a>
+    <button class="btn" type="button" data-bibtex-toggle aria-expanded="false">BibTeX</button>
+    <button class="btn" type="button" data-bibtex-copy><span class="btn__label">Copy</span></button>
+  </div>
+  <pre class="bib-pre"><code class="bib">@inproceedings{liu2025towards,
+  title     = {Towards Understanding the Robustness of Diffusion-Based Purification:
+               A Stochastic Perspective},
+  author    = {Liu, Yiming and Liu, Kezhao and Xiao, Yao and Dong, Ziyi and
+               Xu, Xiaogang and Wei, Pengxu and Lin, Liang},
+  booktitle = {The Thirteenth International Conference on Learning Representations},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=shqjOIK3SA},
+}</code></pre>
+</li>  </ol>
+</section>
+
+<section class="section" id="open-source">
+  <div class="section__head">
+    <h2 class="section__title">开源</h2>
+  </div>
+  <div class="repos">
+    <div class="repo">
+      <h3 class="repo__name"><a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a></h3>
+      <p class="repo__role">维护者 &middot; KL 算法、FSDP2/CP/TP 与 DeepSpeed AutoTP 后端</p>
+      <p class="repo__blurb">基于 Ray、vLLM 和 ZeRO-3 的高性能 RLHF 框架。</p>
+    </div>
+    <div class="repo">
+      <h3 class="repo__name"><a href="https://github.com/open-mmlab/mmdetection">MMDetection</a></h3>
+      <p class="repo__role">核心贡献者 &middot; Detection Transformer 系列（2.x 与 3.x）</p>
+      <p class="repo__blurb">使用最广泛的目标检测工具箱，我重构了其中的 DETR 系列。</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>&copy; 2026 Yiming Liu &middot; 刘祎铭</span>
+    <span class="footer__built">最近构建 &middot; 2026 年 11 月</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

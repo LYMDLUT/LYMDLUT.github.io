@@ -1,53 +1,90 @@
 # Single source of truth for the site. Edit here, then run `python3 build.py`.
+#
+# Any `{en: ..., zh: ...}` map is collapsed by build.py to the language it is
+# rendering, so English and Chinese content stays side by side in one file.
 
 site:
-  title: Yiming Liu's Page
   url: https://LYMDLUT.github.io
-  description: >-
-    Yiming Liu (刘祎铭) - Researcher at Tencent Hunyuan, working on LLM evaluation.
-    Previously object detection, diffusion models, and RL infrastructure.
-  keywords: LLM Evaluation, Benchmarks, Multimodal Large Language Models, RLHF, RLVR, Reinforcement Learning
+  title:
+    en: Yiming Liu's Page
+    zh: 刘祎铭的主页
+  description:
+    en: >-
+      Yiming Liu (刘祎铭) - Researcher at Tencent Hunyuan, working on LLM evaluation.
+      Previously object detection, diffusion models, and RL infrastructure.
+    zh: >-
+      刘祎铭 - 腾讯混元研究员，做大模型评测。此前做过目标检测、扩散模型和 RL 基础设施。
+  keywords:
+    en: LLM Evaluation, Benchmarks, Multimodal Large Language Models, RLHF, RLVR, Reinforcement Learning
+    zh: 大模型评测, 基准, 多模态大模型, RLHF, RLVR, 强化学习
+
+# Chrome: navigation, section headings, footer.
+ui:
+  nav_about: { en: About, zh: 关于 }
+  nav_timeline: { en: Timeline, zh: 时间线 }
+  nav_publications: { en: Publications, zh: 论文 }
+  nav_cv: { en: CV, zh: 简历 }
+  section_timeline: { en: Timeline, zh: 时间线 }
+  section_publications: { en: Publications, zh: 论文 }
+  section_open_source: { en: Open source, zh: 开源 }
+  equal_contribution: { en: "* denotes equal contribution", zh: "* 表示共同一作" }
+  footer_built: { en: last built, zh: 最近构建 }
+  skip_to_content: { en: Skip to content, zh: 跳到正文 }
+  theme_toggle: { en: Toggle dark mode, zh: 切换深色模式 }
+  # Label of the link that switches to the other language.
+  switch_language: { en: 中文, zh: English }
 
 profile:
   name_zh: 刘祎铭
   name_en: Yiming Liu
-  tagline: Researcher @ Tencent Hunyuan.
+  tagline:
+    en: Researcher @ Tencent Hunyuan.
+    zh: 腾讯混元 · 研究员
   portrait: assets/img/portrait.jpg
   links:
     - { kind: email, label: Email, handle: "letusgo126@gmail.com", url: "mailto:letusgo126@gmail.com" }
     - { kind: github, label: GitHub, handle: "github.com/LYMDLUT", url: "https://github.com/LYMDLUT" }
     - { kind: openreview, label: OpenReview, url: "https://openreview.net/profile?id=~Yiming_Liu15" }
     - { kind: cv, label: CV, url: "assets/cv/Yiming_Liu_CV.pdf" }
-  about: |
-    <p>
-      I am a Researcher at <strong>Tencent Hunyuan</strong>, where we work on
-      <strong>LLM evaluation</strong>. Prior to this, I worked on object detection,
-      diffusion models, and RL infrastructure.
-    </p>
-    <p>
-      I received my M.Eng. in Computer Vision from
-      <a href="https://www.sysu.edu.cn/">Sun Yat-sen University</a> in 2025, advised by
-      <a href="https://www.linliang.net/">Prof. Liang Lin</a> at the
-      <a href="https://www.sysu-hcp.net/">HCP Lab</a>, and my B.Eng. in Electronic and
-      Information Engineering from
-      <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> in 2022.
-    </p>
+  about:
+    en: |
+      <p>
+        I am a Researcher at <strong>Tencent Hunyuan</strong>, where we work on
+        <strong>LLM evaluation</strong>. Prior to this, I worked on object detection,
+        diffusion models, and RL infrastructure.
+      </p>
+      <p>
+        I received my M.Eng. in Computer Vision from
+        <a href="https://www.sysu.edu.cn/">Sun Yat-sen University</a> in 2025, advised by
+        <a href="https://www.linliang.net/">Prof. Liang Lin</a> at the
+        <a href="https://www.sysu-hcp.net/">HCP Lab</a>, and my B.Eng. in Electronic and
+        Information Engineering from
+        <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> in 2022.
+      </p>
+    # Chinese paragraphs stay on one line: a newline inside CJK text renders as
+    # an unwanted space in HTML.
+    zh: |
+      <p>我是<strong>腾讯混元</strong>的研究员，目前在做<strong>大模型评测</strong>。在此之前做过目标检测、扩散模型和 RL 基础设施。</p>
+      <p>2025 年于<a href="https://www.sysu.edu.cn/">中山大学</a>获计算机视觉硕士学位，导师为<a href="https://www.sysu-hcp.net/">人机物智能融合实验室（HCP Lab）</a>的<a href="https://www.linliang.net/">林倞</a>教授；2022 年于<a href="https://www.dlut.edu.cn/">大连理工大学</a>获电子信息工程学士学位。</p>
 
 # The spine of the page: one entry per chapter, newest first.
 timeline:
-  - period: Jul 2025 &ndash; now
+  - period: { en: Jul 2025 &ndash; now, zh: 2025 年 7 月 &ndash; 至今 }
     tag: Hunyuan
     tag_kind: now
-    title: LLM Evaluation
-    org: Tencent Hunyuan
-    body: |
-      <p>
-        We work on evaluating large language and multimodal models at Tencent Hunyuan,
-        including benchmarks such as <strong>jy-crpg-bench</strong>,
-        <strong>VisualNeedle</strong>, <strong>EternalMath</strong>, and
-        <strong>DramaChain Bench</strong>, as well as automated scoring and attribution
-        pipelines for image and video generation (<strong>Q-Save</strong>).
-      </p>
+    title: { en: LLM Evaluation, zh: 大模型评测 }
+    org: { en: Tencent Hunyuan, zh: 腾讯混元 }
+    body:
+      en: |
+        <p>
+          We work on evaluating large language and multimodal models at Tencent Hunyuan,
+          including benchmarks such as <strong>jy-crpg-bench</strong>,
+          <strong>VisualNeedle</strong>, <strong>EternalMath</strong>, and
+          <strong>DramaChain Bench</strong>, as well as automated scoring and attribution
+          pipelines for image and video generation (<strong>Q-Save</strong>).
+        </p>
+      zh: |
+        <p>在腾讯混元做大语言模型与多模态模型的评测，包括 <strong>jy-crpg-bench</strong>、<strong>VisualNeedle</strong>、<strong>EternalMath</strong>、<strong>DramaChain Bench</strong> 等基准，以及图像与视频生成的自动打分与归因流水线（<strong>Q-Save</strong>）。</p>
     links:
       - { label: jy-crpg-bench, url: "https://hanxiao.io/jy-crpg-bench/" }
       - { label: VisualNeedle, url: "https://arxiv.org/abs/2605.26380" }
@@ -55,77 +92,94 @@ timeline:
       - { label: DramaChain Bench, url: "https://arxiv.org/abs/2609.00646" }
       - { label: EternalMath, url: "https://arxiv.org/abs/2601.01400" }
 
-  - period: Sep 2024 &ndash; now
+  - period: { en: Sep 2024 &ndash; now, zh: 2024 年 9 月 &ndash; 至今 }
     tag: OpenRLHF
     tag_kind: code
-    title: RL Infrastructure &amp; KL Regularization
+    title: { en: RL Infrastructure &amp; KL Regularization, zh: RL 基础设施与 KL 正则 }
     org: OpenRLHF
-    body: |
-      <p>
-        Developed KL-loss algorithms and distributed training backends (DeepSpeed AutoTP,
-        FSDP2&nbsp;+&nbsp;CP&nbsp;+&nbsp;TP) in
-        <a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a>. Identified the
-        gradient bias of using the <code>k3</code> estimator as a loss in GRPO and
-        proposed the unbiased <code>k2</code> loss (cited by REINFORCE++), formalized in
-        <em>Rethinking KL Regularization in RLHF</em>.
-      </p>
+    body:
+      en: |
+        <p>
+          Developed KL-loss algorithms and distributed training backends (DeepSpeed AutoTP,
+          FSDP2&nbsp;+&nbsp;CP&nbsp;+&nbsp;TP) in
+          <a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a>. Identified the
+          gradient bias of using the <code>k3</code> estimator as a loss in GRPO and
+          proposed the unbiased <code>k2</code> loss (cited by REINFORCE++), formalized in
+          <em>Rethinking KL Regularization in RLHF</em>.
+        </p>
+      zh: |
+        <p>在 <a href="https://github.com/OpenRLHF/OpenRLHF">OpenRLHF</a> 中开发 KL 损失算法与分布式训练后端（DeepSpeed AutoTP、FSDP2&nbsp;+&nbsp;CP&nbsp;+&nbsp;TP）。首次发现 GRPO 中把 <code>k3</code> 估计量直接当作损失函数会带来梯度有偏，提出无偏的 <code>k2</code> loss（被 REINFORCE++ 引用），并总结为 <em>Rethinking KL Regularization in RLHF</em>。</p>
     links:
       - { label: OpenRLHF, url: "https://github.com/OpenRLHF/OpenRLHF" }
-      - { label: EMNLP 2025 paper, url: "https://aclanthology.org/2025.emnlp-demos.48/" }
+      - { label: { en: EMNLP 2025 paper, zh: EMNLP 2025 论文 }, url: "https://aclanthology.org/2025.emnlp-demos.48/" }
       - { label: Rethinking KL Regularization, url: "https://arxiv.org/abs/2510.01555" }
 
-  - period: Mar 2023 &ndash; Apr 2025
+  - period: { en: Mar 2023 &ndash; Apr 2025, zh: 2023 年 3 月 &ndash; 2025 年 4 月 }
     tag: ICLR 2025
     tag_kind: paper
-    title: Diffusion-Based Adversarial Purification
-    org: HCP Lab, Sun Yat-sen University
-    body: |
-      <p>
-        Showed from a stochastic perspective that diffusion-based purification defends
-        through randomness rather than KL contraction or Gaussian noise masking, while
-        its local loss landscape remains non-flat. Proposed diffusion denoising
-        adversarial training to smooth the loss landscape across DDPM, DDIM, VP-SDE, and
-        EDM.
-      </p>
+    title: { en: Diffusion-Based Adversarial Purification, zh: 基于扩散模型的对抗净化 }
+    org: { en: "HCP Lab, Sun Yat-sen University", zh: 中山大学 HCP Lab }
+    body:
+      en: |
+        <p>
+          Showed from a stochastic perspective that diffusion-based purification defends
+          through randomness rather than KL contraction or Gaussian noise masking, while
+          its local loss landscape remains non-flat. Proposed diffusion denoising
+          adversarial training to smooth the loss landscape across DDPM, DDIM, VP-SDE, and
+          EDM.
+        </p>
+      zh: |
+        <p>从随机性的角度指出，扩散净化的防御能力来自随机性，而非既有研究认为的「前向加噪减小 KL 散度」或「高斯噪声的掩盖效应」，且其 Loss landscape 局部并不平坦。提出扩散去噪对抗训练，在 DDPM、DDIM、VP-SDE、EDM 上平滑 Loss landscape 并一致提升鲁棒性。</p>
     links:
       - { label: OpenReview, url: "https://openreview.net/forum?id=shqjOIK3SA" }
       - { label: arXiv, url: "https://arxiv.org/abs/2404.14309" }
 
-  - period: Jul 2022 &ndash; Mar 2023
+  - period: { en: Jul 2022 &ndash; Mar 2023, zh: 2022 年 7 月 &ndash; 2023 年 3 月 }
     tag: MMDetection
     tag_kind: code
-    title: Detection Transformers in MMDetection
-    org: Shanghai AI Laboratory
-    body: |
-      <p>
-        Core contributor to the Detection Transformer (<code>refactor-detr</code>)
-        refactor across <a href="https://github.com/open-mmlab/mmdetection">MMDetection</a>
-        2.x and 3.x. Simplified the registry and inheritance hierarchy, unified module
-        data structures, re-implemented Conditional DETR, DAB-DETR, and DINO with strict
-        metric alignment, and presented the work at an OpenMMLab community talk.
-      </p>
+    title: { en: Detection Transformers in MMDetection, zh: MMDetection 中的 Detection Transformer }
+    org: { en: Shanghai AI Laboratory, zh: 上海人工智能实验室 }
+    body:
+      en: |
+        <p>
+          Core contributor to the Detection Transformer (<code>refactor-detr</code>)
+          refactor across <a href="https://github.com/open-mmlab/mmdetection">MMDetection</a>
+          2.x and 3.x. Simplified the registry and inheritance hierarchy, unified module
+          data structures, re-implemented Conditional DETR, DAB-DETR, and DINO with strict
+          metric alignment, and presented the work at an OpenMMLab community talk.
+        </p>
+      zh: |
+        <p><a href="https://github.com/open-mmlab/mmdetection">MMDetection</a> 2.x 与 3.x 中 Detection Transformer 系列重构（<code>refactor-detr</code>）的核心贡献者。简化注册机制与继承层级，统一模块数据结构，重新实现 Conditional DETR、DAB-DETR 和 DINO 并严格对齐指标，并受邀在 OpenMMLab 社区开放麦上分享这项工作。</p>
     links:
       - { label: refactor-detr, url: "https://github.com/open-mmlab/mmdetection/tree/refactor-detr" }
 
 open_source:
   - name: OpenRLHF
     url: https://github.com/OpenRLHF/OpenRLHF
-    role: Maintainer &middot; KL algorithms, FSDP2/CP/TP &amp; DeepSpeed AutoTP backends
-    blurb: A high-performance RLHF framework built on Ray, vLLM, and ZeRO-3.
+    role:
+      en: Maintainer &middot; KL algorithms, FSDP2/CP/TP &amp; DeepSpeed AutoTP backends
+      zh: 维护者 &middot; KL 算法、FSDP2/CP/TP 与 DeepSpeed AutoTP 后端
+    blurb:
+      en: A high-performance RLHF framework built on Ray, vLLM, and ZeRO-3.
+      zh: 基于 Ray、vLLM 和 ZeRO-3 的高性能 RLHF 框架。
   - name: MMDetection
     url: https://github.com/open-mmlab/mmdetection
-    role: Core contributor &middot; Detection Transformers (2.x &amp; 3.x)
-    blurb: The most widely used object detection toolbox; I rebuilt its DETR family.
+    role:
+      en: Core contributor &middot; Detection Transformers (2.x &amp; 3.x)
+      zh: 核心贡献者 &middot; Detection Transformer 系列（2.x 与 3.x）
+    blurb:
+      en: The most widely used object detection toolbox; I rebuilt its DETR family.
+      zh: 使用最广泛的目标检测工具箱，我重构了其中的 DETR 系列。
 
 # `authors` highlights the entry equal to profile.name_en. Suffix a name with `*`
 # for equal contribution.
 publications:
   - title: "jy-crpg-bench: A Long-Horizon Benchmark for Frontier Models in an Open-World RPG"
     authors: [Han Xiao, Yiming Liu]
-    venue: Preprint
+    venue: { en: Preprint, zh: 预印本 }
     year: 2026
-    note: Under review
-    topic: Evaluation &amp; Benchmarks
+    note: { en: Under review, zh: 投稿中 }
+    topic: { en: Evaluation &amp; Benchmarks, zh: 评测与基准 }
     links:
       Project: "https://hanxiao.io/jy-crpg-bench/"
       Code: "https://github.com/hanxiao/jy-crpg-bench"
@@ -141,9 +195,9 @@ publications:
     authors: [Haoyuan Shi, Mingtao Chen, Shuo Jiang, Ziyan Chen, Xuyi Sheng, Yiming Liu,
               Ying Zhang, Miao Wang, Jianxiang Lu, Fanyang Lu, Songyuanyi Lu, Xiele Wu,
               Zhichao Hu, Yuhong Liu, Richeng Xuan]
-    venue: arXiv preprint
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
     year: 2026
-    topic: Evaluation &amp; Benchmarks
+    topic: { en: Evaluation &amp; Benchmarks, zh: 评测与基准 }
     links:
       arXiv: "https://arxiv.org/abs/2609.00646"
       PDF: "https://arxiv.org/pdf/2609.00646"
@@ -159,12 +213,12 @@ publications:
       }
 
   - title: "VisualNeedle: Benchmarking Active Visual Search in Information-Dense Scenes"
-    authors: [Jingru Chen, Yiming Liu, Mingtao Chen, Sijie Chen, Richeng Xuan, Liang Yang,
+    authors: [Jingru Chen*, Yiming Liu*, Mingtao Chen, Sijie Chen, Richeng Xuan, Liang Yang,
               Zhichao Hu, Fanyang Lu]
-    venue: arXiv preprint
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
     year: 2026
-    note: Under review
-    topic: Evaluation &amp; Benchmarks
+    note: { en: Under review, zh: 投稿中 }
+    topic: { en: Evaluation &amp; Benchmarks, zh: 评测与基准 }
     links:
       arXiv: "https://arxiv.org/abs/2605.26380"
       PDF: "https://arxiv.org/pdf/2605.26380"
@@ -179,9 +233,9 @@ publications:
 
   - title: "EternalMath: A Living Benchmark of Frontier Mathematics that Evolves with Human Discovery"
     authors: [Jicheng Ma, Guohua Wang, Xinhua Feng, Yiming Liu, Zhichao Hu, Yuhong Liu]
-    venue: arXiv preprint
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
     year: 2026
-    topic: Evaluation &amp; Benchmarks
+    topic: { en: Evaluation &amp; Benchmarks, zh: 评测与基准 }
     links:
       arXiv: "https://arxiv.org/abs/2601.01400"
       PDF: "https://arxiv.org/pdf/2601.01400"
@@ -198,9 +252,9 @@ publications:
     authors: [Xiele Wu, Mingtao Chen, Zicheng Zhang, Yixian Liu, Yiming Liu, Jianxiang Lu,
               Jin Wang, Shushi Wang, Chunyi Li, Zhichao Hu, Yuhong Liu, Xiongkuo Min,
               Guangtao Zhai, Xiaohong Liu]
-    venue: arXiv preprint
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
     year: 2025
-    topic: Evaluation &amp; Benchmarks
+    topic: { en: Evaluation &amp; Benchmarks, zh: 评测与基准 }
     links:
       arXiv: "https://arxiv.org/abs/2511.18825"
       PDF: "https://arxiv.org/pdf/2511.18825"
@@ -217,9 +271,9 @@ publications:
 
   - title: "Rethinking KL Regularization in RLHF: From Value Estimation to Gradient Optimization"
     authors: [Kezhao Liu, Jason Klein Liu, Mingtao Chen, Yiming Liu]
-    venue: arXiv preprint
+    venue: { en: arXiv preprint, zh: arXiv 预印本 }
     year: 2025
-    topic: RL for LLMs
+    topic: { en: RL for LLMs, zh: LLM 强化学习 }
     links:
       arXiv: "https://arxiv.org/abs/2510.01555"
       PDF: "https://arxiv.org/pdf/2510.01555"
@@ -235,9 +289,9 @@ publications:
     authors: [Jian Hu, Xibin Wu, Wei Shen, Jason Klein Liu, Weixun Wang, Songlin Jiang,
               Haoran Wang, Hao Chen, Bin Chen, Wenkai Fang, Xianyu, Yu Cao, Haotian Xu,
               Yiming Liu]
-    venue: EMNLP (System Demonstrations)
+    venue: { en: EMNLP (System Demonstrations), zh: EMNLP 演示论文 }
     year: 2025
-    topic: RL Infrastructure
+    topic: { en: RL Infrastructure, zh: RL 基础设施 }
     links:
       ACL Anthology: "https://aclanthology.org/2025.emnlp-demos.48/"
       PDF: "https://aclanthology.org/2025.emnlp-demos.48.pdf"
@@ -263,7 +317,7 @@ publications:
     venue: ICLR
     year: 2025
     note: Poster
-    topic: Adversarial Robustness
+    topic: { en: Adversarial Robustness, zh: 对抗鲁棒性 }
     links:
       OpenReview: "https://openreview.net/forum?id=shqjOIK3SA"
       arXiv: "https://arxiv.org/abs/2404.14309"

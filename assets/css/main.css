@@ -319,6 +319,17 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon {
   margin: 0;
 }
 
+.section__note {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.nav__lang {
+  font-variant-numeric: tabular-nums;
+}
+
 /* --- timeline ------------------------------------------------------------- */
 
 .timeline {

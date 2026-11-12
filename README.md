@@ -8,14 +8,18 @@ All content lives in [`data/site.yml`](data/site.yml) — profile, timeline chap
 publications, open-source entries. Prose fields are authored as HTML, so inline
 `<a>`, `<strong>`, and `<code>` are allowed.
 
-After editing, regenerate `index.html`:
+Any `{en: ..., zh: ...}` map is collapsed by `build.py` to the language it is rendering,
+which keeps both languages next to each other instead of in two drifting files. Keep each
+Chinese paragraph on a single line: a newline inside CJK text renders as a stray space.
+
+After editing, regenerate both pages:
 
 ```sh
-python3 build.py        # needs PyYAML + Jinja2
+python3 build.py        # needs PyYAML + Jinja2 → index.html and zh/index.html
 python3 -m http.server  # preview at http://localhost:8000
 ```
 
-The generated `index.html` is committed so GitHub Pages can serve it directly;
+The generated pages are committed so GitHub Pages can serve them directly;
 `.nojekyll` keeps Pages from trying to build the repo itself.
 
 ## Adding a paper
