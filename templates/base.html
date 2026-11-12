@@ -59,7 +59,16 @@
       {% for item in nav %}
       <li><a href="{{ item.url }}">{{ item.label }}</a></li>
       {% endfor %}
-      <li><a class="nav__lang" href="{{ switch_url }}" hreflang="{{ 'en' if lang == 'zh' else 'zh-Hans' }}">{{ ui.switch_language }}</a></li>
+      <li class="nav__lang">
+        {% for code in ["zh", "en"] %}
+        {% if code == lang %}
+        <span class="nav__lang-current" aria-current="true">{{ ui["lang_" ~ code] }}</span>
+        {% else %}
+        <a href="{{ lang_links[code] }}" hreflang="{{ 'zh-Hans' if code == 'zh' else 'en' }}">{{ ui["lang_" ~ code] }}</a>
+        {% endif %}
+        {{ '<span class="nav__lang-sep" aria-hidden="true">/</span>' if not loop.last }}
+        {% endfor %}
+      </li>
       <li>
         <button class="theme-toggle" type="button" aria-label="{{ ui.theme_toggle }}">
           {{ icons.icon("sun") }}{{ icons.icon("moon") }}

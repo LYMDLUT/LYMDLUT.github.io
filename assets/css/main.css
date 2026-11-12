@@ -327,7 +327,18 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon {
 }
 
 .nav__lang {
-  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.nav__lang-current {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav__lang-sep {
+  color: var(--line);
 }
 
 /* --- timeline ------------------------------------------------------------- */

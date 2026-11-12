@@ -31,8 +31,10 @@ ui:
   footer_built: { en: last built, zh: 最近构建 }
   skip_to_content: { en: Skip to content, zh: 跳到正文 }
   theme_toggle: { en: Toggle dark mode, zh: 切换深色模式 }
-  # Label of the link that switches to the other language.
-  switch_language: { en: 中文, zh: English }
+  # Labels of the 中/英 switch. Deliberately not an {en, zh} map: both labels
+  # show on both pages, so neither may be collapsed away.
+  lang_zh: 中
+  lang_en: 英
 
 profile:
   name_zh: 刘祎铭

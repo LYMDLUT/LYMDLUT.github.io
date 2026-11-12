@@ -57,7 +57,6 @@ def main() -> None:
     for lang, prefix in LANGUAGES.items():
         page = localize(data, lang)
         root = "../" * prefix.count("/")  # how to reach the site root from this page
-        other = next(code for code in LANGUAGES if code != lang)
         portrait = page["profile"]["portrait"]
         for link in page["profile"]["links"]:
             if is_site_relative(link["url"]):
@@ -68,7 +67,7 @@ def main() -> None:
             root=root,
             portrait_url=f"{data['site']['url']}/{portrait}",
             alternates={code: f"{data['site']['url']}/{path}" for code, path in LANGUAGES.items()},
-            switch_url=f"{root}{LANGUAGES[other]}",
+            lang_links={code: f"{root}{path}" for code, path in LANGUAGES.items()},
             canonical=f"{data['site']['url']}/{prefix}",
             site=page["site"],
             ui=page["ui"],
